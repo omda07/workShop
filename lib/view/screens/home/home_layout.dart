@@ -12,7 +12,8 @@ class Home extends StatelessWidget {
       builder: (context, value, child) {
         var provider=Provider.of<HomeProvider>(context);
         return Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+          ),
           body: Center(
             child: provider.screens[provider.currentIndex],
           ),

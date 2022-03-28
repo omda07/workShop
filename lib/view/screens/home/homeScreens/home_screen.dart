@@ -6,22 +6,18 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
-      child: GridView.count(
-        crossAxisCount: 2,
-         physics:const BouncingScrollPhysics(),
-         children: const[
-           ItemBuilder('Lectures',Icons.menu_book),
-           ItemBuilder('Sections',Icons.video_label),
-           ItemBuilder('Events',Icons.event_available_outlined),
-           ItemBuilder('Midterm',Icons.book),
-           ItemBuilder('Final',Icons.book_outlined),
-           ItemBuilder('Note',Icons.note_add_outlined)
-         ],
+    return GridView.count(
+      crossAxisCount: 2,
+       physics:const BouncingScrollPhysics(),
+       children: const[
+         ItemBuilder('Lectures','assets/icons/lecture.png'),
+         ItemBuilder('Sections','assets/icons/sections.png'),
+         ItemBuilder('Events','assets/icons/events.png'),
+         ItemBuilder('Midterm','assets/icons/mid.png'),
+         ItemBuilder('Final','assets/icons/final.png'),
+         ItemBuilder('Note','assets/icons/book.png')
+       ],
 
-          ),
-    );
+        );
   }
 }
